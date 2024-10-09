@@ -9,26 +9,26 @@
 script = ExtResource("1_m5oe2")
 
 [node name="left" type="Sprite2D" parent="."]
-position = Vector2(-1.00002, 217)
+position = Vector2(63, 264)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_6q3eu")
 offset = Vector2(67, 183)
 
 [node name="right" type="Sprite2D" parent="."]
-position = Vector2(479, 203)
+position = Vector2(918, 260)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_6q3eu")
 offset = Vector2(577, 187)
 
 [node name="ball" type="Sprite2D" parent="."]
 top_level = true
-position = Vector2(307, 219)
+position = Vector2(565, 290)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_qf4v1")
 offset = Vector2(320, 188)
 
 [node name="middle" type="Sprite2D" parent="."]
-position = Vector2(-0.166668, 65)
-scale = Vector2(1.00833, 0.87)
+position = Vector2(258, 82.6667)
+scale = Vector2(1.00833, 1.24667)
 texture = ExtResource("3_iqf1o")
 offset = Vector2(320, 200)
