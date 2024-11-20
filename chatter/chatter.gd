@@ -14,14 +14,14 @@ var msg : String
 
 func _on_host_pressed():
 	var peer = ENetMultiplayerPeer.new()
-	peer.create_server(1027)
+	peer.create_server(5001)
 	get_tree().set_multiplayer(SceneMultiplayer.new(),self.get_path())
 	multiplayer.multiplayer_peer=peer
 	joined()
 
 func _on_join_pressed():
 	var peer = ENetMultiplayerPeer.new()
-	peer.create_client("127.0.0.1",1027)
+	peer.create_client("104.236.210.111",5001)
 	get_tree().set_multiplayer(SceneMultiplayer.new(),self.get_path())
 	multiplayer.multiplayer_peer=peer
 	joined()

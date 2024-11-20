@@ -6,28 +6,29 @@
 script = ExtResource("1_svv85")
 
 [node name="Host" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_top = 2.0
+offset_right = 55.0
+offset_bottom = 33.0
 text = "Host"
 
 [node name="Join" type="Button" parent="."]
-offset_left = 44.0
-offset_top = 1.0
-offset_right = 82.0
-offset_bottom = 32.0
+offset_left = 56.0
+offset_top = 2.0
+offset_right = 111.0
+offset_bottom = 33.0
 text = "Join
 "
 
 [node name="Username" type="LineEdit" parent="."]
-offset_left = 83.0
+offset_left = 112.0
 offset_top = 2.0
-offset_right = 173.0
+offset_right = 202.0
 offset_bottom = 33.0
 placeholder_text = "Username"
 
 [node name="Send" type="Button" parent="."]
 offset_top = -63.0
-offset_right = 47.0
+offset_right = 55.0
 offset_bottom = -32.0
 text = "Send"
 
@@ -41,18 +42,18 @@ placeholder_text = "Message"
 [node name="Messages" type="TextEdit" parent="."]
 offset_left = 1.0
 offset_top = -255.0
-offset_right = 213.0
+offset_right = 215.0
 offset_bottom = -96.0
 editable = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(97, -175)
+position = Vector2(109, -174)
 zoom = Vector2(1.5, 1.5)
 
 [node name="Pong" type="Button" parent="."]
-offset_left = 159.0
+offset_left = 160.0
 offset_top = -63.0
-offset_right = 214.0
+offset_right = 215.0
 offset_bottom = -32.0
 text = "pong"
 
