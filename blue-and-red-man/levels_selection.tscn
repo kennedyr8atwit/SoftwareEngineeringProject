@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://fcdo2ac08h4k"]
+
+[ext_resource type="FontFile" uid="uid://yd5kgxkekkil" path="res://more fonts/KiriFont.ttf" id="1_nfw5v"]
+[ext_resource type="Script" path="res://snow.gd" id="2_a1kq7"]
+[ext_resource type="Script" path="res://metal.gd" id="3_vsnnj"]
+[ext_resource type="Script" path="res://castle.gd" id="4_cxcym"]
+[ext_resource type="Script" path="res://grass.gd" id="5_78dw0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ibll"]
+font_color = Color(0.789116, 0.130791, 0.151282, 1)
+
+[node name="Levels Selection" type="Control"]
+layout_mode = 3
+anchor_right = 1.991
+anchor_bottom = 1.92
+offset_right = 22.3679
+offset_bottom = 21.84
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -42.0
+offset_right = 1145.0
+offset_bottom = 651.0
+color = Color(0.545098, 1, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 84.0
+offset_right = 1572.0
+offset_bottom = 330.0
+theme_override_fonts/font = ExtResource("1_nfw5v")
+theme_override_font_sizes/font_size = 100
+text = "Select a Level
+"
+label_settings = SubResource("LabelSettings_3ibll")
+
+[node name="Snow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 93.0
+offset_right = 390.0
+offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("1_nfw5v")
+text = "Snow
+"
+flat = true
+script = ExtResource("2_a1kq7")
+
+[node name="Metal" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1496.0
+offset_top = 89.0
+offset_right = 1678.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("1_nfw5v")
+text = "Metal"
+flat = true
+script = ExtResource("3_vsnnj")
+
+[node name="Castle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 99.0
+offset_right = 883.0
+offset_bottom = 173.0
+theme_override_fonts/font = ExtResource("1_nfw5v")
+text = "Castle
+"
+flat = true
+script = ExtResource("4_cxcym")
+
+[node name="Grass" type="Button" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 94.0
+offset_right = 637.0
+offset_bottom = 168.0
+theme_override_fonts/font = ExtResource("1_nfw5v")
+text = "Grass"
+flat = true
+script = ExtResource("5_78dw0")
+
+[connection signal="pressed" from="Snow" to="Snow" method="_on_snow_pressed"]
+[connection signal="pressed" from="Metal" to="Snow" method="_on_metal_pressed"]
+[connection signal="pressed" from="Castle" to="Castle" method="_on_castle_pressed"]
+[connection signal="pressed" from="Grass" to="Grass" method="_on_grass_pressed"]

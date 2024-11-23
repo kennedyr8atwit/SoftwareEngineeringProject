@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhe1xqyw1mjpc"]
+
+[ext_resource type="Texture2D" uid="uid://cb0at11vdvtev" path="res://Free Platform Game Assets/Update 1.9/NewBackgraound 1920x1080 (2).png" id="1_3xoj8"]
+[ext_resource type="FontFile" uid="uid://yd5kgxkekkil" path="res://more fonts/KiriFont.ttf" id="2_n1gtr"]
+[ext_resource type="Script" path="res://button.gd" id="3_pqbsp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pg0ih"]
+font = ExtResource("2_n1gtr")
+font_size = 90
+font_color = Color(0.621799, 0.103284, 0.164124, 1)
+outline_size = 5
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(1.32263, 1.14414)
+
+[node name="NewBackgraound1920x1080(2)" type="Sprite2D" parent="."]
+position = Vector2(363.123, -83.624)
+scale = Vector2(1.48908, 1.93364)
+texture = ExtResource("1_3xoj8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -199.602
+offset_top = 71.6693
+offset_right = 1137.4
+offset_bottom = 560.669
+color = Color(0.557734, 0.326772, 0.0856066, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 162.554
+offset_top = 205.394
+offset_right = 979.555
+offset_bottom = 442.394
+text = "Red man
+
+"
+label_settings = SubResource("LabelSettings_pg0ih")
+
+[node name="Play_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 165.579
+offset_top = 313.772
+offset_right = 658.579
+offset_bottom = 460.772
+theme_override_fonts/font = ExtResource("2_n1gtr")
+theme_override_font_sizes/font_size = 30
+text = "Play!
+"
+flat = true
+script = ExtResource("3_pqbsp")
+
+[connection signal="pressed" from="Play_Button" to="Play_Button" method="_on_pressed"]
